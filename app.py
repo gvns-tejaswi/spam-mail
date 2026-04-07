@@ -16,9 +16,9 @@ def predict():
     data = vectorizer.transform([text])
     result = model.predict(data)
 
-    if result[0] == 1:
-        return "Spam"
+    if result[0] == 0:
+        return "Spam 🚨"
     else:
-        return "Not Spam"
+        return "Ham ✅"
 
 app.run(host='0.0.0.0', port=5000)
