@@ -16,7 +16,7 @@ def predict():
     data = vectorizer.transform([text])
     result = model.predict(data)
 
-    if result[0] == 0:
+    if result[0] == 1:
         return "Spam 🚨"
     else:
         return "Ham ✅"
